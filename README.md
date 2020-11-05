@@ -43,9 +43,9 @@
 
 | 名称     | 内容           |   说明  |
 | -------- | ------------- |   ----- |
-| `SMZDM_COOKIE`          |   什么知道买 cookie    |什么值得买 cookie|
-| `SMZDM_USER`            |   什么值得买账号   |什么值得买账号|
-| `SMZDM_COOKIE`          |   什么值得买密码   |什么值得买密码|
+| `SMZDM_COOKIE`          |   什么值得买 cookie    |什么值得买 cookie|
+| `SMZDM_USER`            |   什么值得买账号        |什么值得买账号|
+| `SMZDM_COOKIE`          |   什么值得买密码        |什么值得买密码|
 | `PUSH_KEY`              |   Server酱SCKEY值      | cookie失效推送[server酱的微信通知](http://sc.ftqq.com/3.version) |
 | `BARK_PUSH`             |   Bark推送值           | 此内容支持自建Bark添加整个链接即可(自建链接切记删除最后一个/  比如你的是https://a.a.com/ 只需要填写https://a.a.com 即可)|
 | `BARK_SOUND`            |   BARK app推送铃声     |BARK app推送铃声,铃声列表去APP查看复制填写|
