@@ -15,12 +15,18 @@ const PASS = process.env.SMZDM_PASS
 const SEND_KEY = process.env.SEND_KEY
 
 async function downFile () {
-    const url = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js'
-    await download(url, './')
+    const url1 = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js'
+    const url2 = 'https://raw.githubusercontent.com/jiegto/Actions_MY/master/magic/magic.json'    
+    await download(url1, './')
+    await download(url2, './')
 }
 
 async function changeFiele () {
-    await fs.writeFileSync( './magic.json', '{ "smzdm_cookie": "${KEY}", "smzdm_account": "${USER}", "smzdm_password": "${PASS}" }', 'utf8')
+    let content = await fs.readFileSync('./magic.json', 'utf8')
+    content = content.replace(/"smzdm_cookie": ""/, `"smzdm_cookie": "${KEY}"`)
+    content = content.replace(/"smzdm_account": ""/, `"smzdm_account": "${USER}"`)
+    content = content.replace(/"smzdm_password": ""/, `"smzdm_password": "${PASS}"`)
+    await fs.writeFileSync( './magic.json', content, 'utf8')
 }
 
 async function deleteFile(path) {
@@ -48,8 +54,8 @@ async function start() {
     await exec("node smzdm_checkin.js >> result.txt");
     console.log('执行完毕')
     const path = "./result.txt";
-    let body = "";
     let content = "";
+    let body = "";
     if (fs.existsSync(path)) {
         body = fs.readFileSync(path, "utf8");
         content = body.match(/title[\s\S]*options/);
