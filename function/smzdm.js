@@ -1,5 +1,5 @@
 // version v0.0.1
-// create by BlueSkyClouds
+// create by jiegto
 // detail url: https://github.com/jiegto/Actions_smzdm
 
 const exec = require('child_process').execSync
