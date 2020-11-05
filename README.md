@@ -39,13 +39,20 @@
 
 3. 如需修改执行时间自行修改`.github\workflows\`下面的yaml内的` cron:` 执行时间为国际标准时间 [时间转换](http://www.timebie.com/cn/universalbeijing.php) 分钟在前，小时在后，尽量提前半小时，因为触发和下载需要一定时间。
 
-## 本项目需要设置的 Secrets:
+## Secrets 集合
+
+### 什么值得买专用
 
 | 名称     | 内容           |   说明  |
 | -------- | ------------- |   ----- |
 | `SMZDM_COOKIE`          |   什么值得买 cookie    |什么值得买 cookie，详细请往下看|
 | `SMZDM_USER`            |   什么值得买账号        |什么值得买账号|
 | `SMZDM_PASS`          |   什么值得买密码        |什么值得买密码|
+
+### 推送专用
+
+| 名称     | 内容           |   说明  |
+| -------- | ------------- |   ----- |
 | `PUSH_KEY`              |   Server酱SCKEY值      | cookie失效推送[server酱的微信通知](http://sc.ftqq.com/3.version) |
 | `BARK_PUSH`             |   Bark推送值           | 此内容支持自建Bark添加整个链接即可(自建链接切记删除最后一个/  比如你的是https://a.a.com/ 只需要填写https://a.a.com 即可)|
 | `BARK_SOUND`            |   BARK app推送铃声     |BARK app推送铃声,铃声列表去APP查看复制填写|
@@ -61,15 +68,15 @@
 
 ![](https://github.com/jiegto/Actions_smzdm/blob/main/backup/SMZDM_Cookie.jpg?raw=true)
 
-### 同步Fork后的代码
+## 同步Fork后的代码
 
-#### 手动同步
+### 手动同步
 
 [手动同步 https://blog.blueskyclouds.com/jsfx/58.html](https://blog.blueskyclouds.com/jsfx/58.html)
 
-#### 自动同步
+### 自动同步
 
-##### 方案A - 强制远程分支覆盖自己的分支
+#### 方案A - 强制远程分支覆盖自己的分支
 
 1. 参考[这里](https://github.com/lxk0301/scripts/blob/master/backUp/gitSync.md)，安装[pull插件](https://github.com/apps/pull)，并确认此项目已在pull插件的作用下（参考文中1-d）。
 
@@ -79,7 +86,7 @@
 
 4. ENJOY!上游更改三小时左右就会自动发起同步。
 
-##### 方案B - 保留自己分支的修改
+#### 方案B - 保留自己分支的修改
 
 > 上游变动后pull插件会自动发起pr，但如果有冲突需要自行**手动**确认。
 
