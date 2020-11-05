@@ -45,13 +45,21 @@
 | -------- | ------------- |   ----- |
 | `SMZDM_COOKIE`          |   什么值得买 cookie    |什么值得买 cookie|
 | `SMZDM_USER`            |   什么值得买账号        |什么值得买账号|
-| `SMZDM_COOKIE`          |   什么值得买密码        |什么值得买密码|
+| `SMZDM_PASS`          |   什么值得买密码        |什么值得买密码|
 | `PUSH_KEY`              |   Server酱SCKEY值      | cookie失效推送[server酱的微信通知](http://sc.ftqq.com/3.version) |
 | `BARK_PUSH`             |   Bark推送值           | 此内容支持自建Bark添加整个链接即可(自建链接切记删除最后一个/  比如你的是https://a.a.com/ 只需要填写https://a.a.com 即可)|
 | `BARK_SOUND`            |   BARK app推送铃声     |BARK app推送铃声,铃声列表去APP查看复制填写|
 | `TG_BOT_TOKEN`          |   telegram推送        | tg推送,填写自己申请[@BotFather](https://t.me/BotFather)的Token,如`10xxx4:AAFcqxxxxgER5uw` , [具体教程](https://github.com/lxk0301/scripts/pull/37#issuecomment-692415594) |
 | `TG_USER_ID`            |   telegram推送        | tg推送,填写[@getuseridbot](https://t.me/getuseridbot)中获取到的纯数字ID, [具体教程](https://github.com/lxk0301/scripts/pull/37#issuecomment-692415594) |
 | `SEND_KEY`              |     推送开关           |如果你想只在COOKIE失效时发送推送信息,就加一个这个,参数值随便写就行|
+
+### 什么值得买 Cookie 获取
+
+1. 电脑浏览器访问 https://zhiyou.smzdm.com/user/ 进行登录，如果登录后，不是该页面，则重新在浏览器中访问一次 https://zhiyou.smzdm.com/user/ 即可。
+
+2. 打开开发者工具,在 Network 选项卡，刷新页面 ,然后选中 user ，在右侧的 Headers 标签里，将 Cookie 字段，复制出来。
+
+![](https://github.com/jiegto/Actions_smzdm/blob/main/backup/Get_Cookie.jpg?raw=true)
 
 ### 同步Fork后的代码
 
@@ -85,7 +93,7 @@
 
 4. ENJOY!上游更改三小时左右就会自动发起同步。
 
-## 什么值得买签到脚本说明
+## 签到脚本说明
 
 1. 什么值得买的会员体系更新后，连续签到30天加30经验值的福利已经没有，每日签到只能获得2点经验值。以现在的会员升级体系，从V5升级到V6，需要1万的经验值，依靠签到需要连续签到13年半。
 
