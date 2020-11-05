@@ -29,7 +29,7 @@
 
 5. **必须** - 请随便找个文件(例如`README.md`)，加个空格提交一下，否则可能会出现无法定时执行的问题(由于规则更新,可能会 Fork 后会默认禁用,请手动点击 Actions 选择要签到的项目 `enable workflows`激活)
 
-6. [定时执行](#定时执行)
+6. [定时执行](##定时执行)
 
 ## 定时执行
 
@@ -43,7 +43,7 @@
 
 | 名称     | 内容           |   说明  |
 | -------- | ------------- |   ----- |
-| `SMZDM_COOKIE`          |   什么值得买 cookie    |什么值得买 cookie|
+| `SMZDM_COOKIE`          |   什么值得买 cookie    |什么值得买 cookie，详细请往下看|
 | `SMZDM_USER`            |   什么值得买账号        |什么值得买账号|
 | `SMZDM_PASS`          |   什么值得买密码        |什么值得买密码|
 | `PUSH_KEY`              |   Server酱SCKEY值      | cookie失效推送[server酱的微信通知](http://sc.ftqq.com/3.version) |
