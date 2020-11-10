@@ -55,18 +55,10 @@ async function start() {
     console.log('执行完毕')
     const path = "./result.txt";
     let content = "";
-    let body1 = "";
-    let body2 = "";
-    let body3 = "";
-    let body4 = "";
-    let body5 = "";
+    let body = "";
     if (fs.existsSync(path)) {
-        body1 = fs.readFileSync(path, "utf8");
-        body2 = body1.match(/title[\s\S]*options/);
-        body3 = body2.replace(/title:/, ``);
-        body4 = body2.replace(/subTitle:/, ``);
-        body5 = body2.replace(/body:/, ``);
-        content = body2.replace(/options/, ``);
+        body = fs.readFileSync(path, "utf8");
+        content = body.match(/title[\s\S]*options/);
     }
 
     if(SEND_KEY) {
