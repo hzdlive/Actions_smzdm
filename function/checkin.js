@@ -17,13 +17,13 @@ const SEND_KEY = process.env.SEND_KEY
 
 async function downFile () {
     const url1 = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js'
-    const url2 = 'https://raw.githubusercontent.com/jiegto/Actions_smzdm/main/function/smzdm_magic.json'    
+    const url2 = 'https://raw.githubusercontent.com/jiegto/Actions_smzdm/main/function/magic.json'    
     await download(url1, './')
     await download(url2, './')
 }
 
 async function changeFiele () {
-    let content = await fs.readFileSync('./smzdm_magic.json', 'utf8')
+    let content = await fs.readFileSync('./magic.json', 'utf8')
     content = content.replace(/"smzdm_cookie": ""/, `"smzdm_cookie": "${KEY}"`)
     content = content.replace(/"smzdm_account": ""/, `"smzdm_account": "${USER}"`)
     content = content.replace(/"smzdm_password": ""/, `"smzdm_password": "${PASS}"`)
