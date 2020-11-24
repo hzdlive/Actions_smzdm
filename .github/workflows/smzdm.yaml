@@ -22,7 +22,7 @@ jobs:
           npm install
       - name: "运行【什么值得买签到】"
         run: |
-          node function/smzdm.js
+          node function/smzdm_checkin.js
         env:
           SMZDM_COOKIE: ${{ secrets.SMZDM_COOKIE }}
           SMZDM_USER: ${{ secrets.SMZDM_USER }}
