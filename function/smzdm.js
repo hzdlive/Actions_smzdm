@@ -57,10 +57,10 @@ async function start() {
     console.log('执行完毕')
     const path = "./result.txt";
     let content = "";
-    let body = "";
+    // let body = "";
     if (fs.existsSync(path)) {
-        body = fs.readFileSync(path, "utf8");
-        content = body.match(/title[\s\S]*options/);
+        content = fs.readFileSync(path, "utf8");
+        // content = body.match(/title[\s\S]*options/);
     }
     
     if(SEND_KEY) {
