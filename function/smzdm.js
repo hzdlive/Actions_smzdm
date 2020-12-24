@@ -59,8 +59,8 @@ async function start() {
     let content = "";
     // let body = "";
     if (fs.existsSync(path)) {
-        content = fs.readFileSync(path, "utf8");
-        // content = body.match(/title[\s\S]*options/);
+        body = fs.readFileSync(path, "utf8");
+        content = body.match(/title[\s\S]*options/);
     }
     
     if(SEND_KEY) {
